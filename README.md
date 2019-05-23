@@ -3,8 +3,14 @@ MCR is the primary Registry for all first party Microsoft docker images that off
 
 Since MCR has no UI of its own, this Github is a means to take customer inputs and feedback. Please use this repo to provide your feedback on usage or concerns with MCR.
 
-# Contributing
+# FAQ
+How does MCR work with Dockerhub - MCR is a public registry that houses Microsoft First party images but it does not have its own catalog UI experience. Docker Hub is the official source for our customers to discover official Microsoft-published container images. For further details of this integration please visit our [blog](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)
 
+What is the difference between MCR and ACR - MCR is a public registry for housing only Mcirosoft's official Container images. ACR is a private container Registry for housing Our customers container Images.
+
+Can I browse MCR - Since MCR does not have a UI/discovery experience, the only experince with the registry is for interacting with a container image. Ex: docker pull mcr.microsoft.com/windows/servercore:ltsc2019
+
+# Contributing
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
