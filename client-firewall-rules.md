@@ -21,7 +21,7 @@ These endpoints follow the convention of: `[region].data.mcr.microsoft.com`.
 
 To access MCR, the following FQDNs are required. 
 
-| Protocol | Target FQDN | Avaialble |
+| Protocol | Target FQDN | Available |
 | - | - | - |
 | https | `mcr.microsoft.com` | Now |
 | https | `*.cdn.mscr.io` | Now - March 3, 2020 |
@@ -29,7 +29,7 @@ To access MCR, the following FQDNs are required.
 
 ![Azure Application Rule](./media/mcr-client-firewall-rules.png)
 
-[More infomration on the Microsoft Container Registry][mcr]
+[More information on the Microsoft Container Registry][mcr]
 
 [mcr]:            https://aka.ms/mcr
 [oci-spec]:       https://github.com/opencontainers/distribution-spec
