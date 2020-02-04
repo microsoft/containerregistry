@@ -1,4 +1,4 @@
-# MCR - Microsoft Container Registry
+# Microsoft Container Registry (MCR)
 
 > See [Client Firewall Rules](./client-firewall-rules.md) for an important change on March 3, 2020
 

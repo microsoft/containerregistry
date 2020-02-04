@@ -1,7 +1,5 @@
 # Microsoft Container Registry (MCR) Client Firewall Rules Configuration
 
-This article explains the endpoints required to pull content from the Microsoft Container Registry (MCR).
-
 MCR is an implementation of the [OCI Distribution Specification][oci-spec] which delivers [artifacts][oci-artifacts], such as container images. The Distribution Spec defines two endpoints:
 
 - **REST Endpoint**: providing content discovery. This is the url users are most familiar with with pulling an image: `docker pull mcr.microsoft.com/windows/servercore:1909`. The REST endpoint is load balanced across multiple worldwide regions, providing consistent content addressable artifacts.
