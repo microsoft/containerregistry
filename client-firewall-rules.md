@@ -14,7 +14,7 @@ These endpoints follow the convention of: `[region].data.mcr.microsoft.com`.
 ## Configuring Client Firewall Rules
 
 > ### **DATA ENDPOINT CHANGE**
-> To provide a consistent FQDN between the REST and data endpoints, on **March 3, 2020** the data endpoint will be changing from `*.cdn.mscr.io` to `*.data.microsoft.com`  
+> To provide a consistent FQDN between the REST and data endpoints, on **March 3, 2020** the data endpoint will be changing from `*.cdn.mscr.io` to `*.data.mcr.microsoft.com`  
   Once a change of the data endpoint is confirmed, clients can remove the `*.cdn.mscr.io` FQDN.
 
 To access MCR, the following FQDNs are required. 
