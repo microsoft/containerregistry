@@ -15,7 +15,7 @@ These endpoints follow the convention of: `[region].data.mcr.microsoft.com`.
 
 > ### **DATA ENDPOINT CHANGE**
 > To provide a consistent FQDN between the REST and data endpoints, beginning **March 3, 2020** the data endpoint will be changing from `*.cdn.mscr.io` to `*.data.mcr.microsoft.com`  
-Depoloyments follow [Azure Safe Deploymnet Pracitces][azure-safe-deployment], which means changes will roll out, per region, over several days.  
+Deployments follow [Azure Safe Deployment Practices][azure-safe-deployment], which means changes will roll out, per region, over several days.  
 Once a change of the data endpoint is confirmed, clients can remove the `*.cdn.mscr.io` FQDN.
 
 To access MCR, the following FQDNs are required. 
@@ -30,7 +30,7 @@ To access MCR, the following FQDNs are required.
 
 ## Testing the `*.cdn.mscr.io` Endpoint
 
-To validate configurations pre March 3rd, 2020, the following multi-arch images are availalble for testing. 
+To validate configurations pre March 3rd, 2020, the following multi-arch images are available for testing. 
 
 ### Windows & Linux
 To test pulling an image:  
@@ -46,7 +46,7 @@ produces a url with `[oldRegionReference].cdn.mscr.io` :
 
 ## Testing the `*.data.mcr.microsoft.com` Data Endpoint
 
-To validate changes will work post March 3rd, 2020, the following images are availalble for testing today.
+To validate changes will work post March 3rd, 2020, the following images are available for testing today.
 
 **Note:** Seperate repos for Windows and Linux are provided for verification:
 
