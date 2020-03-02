@@ -16,7 +16,7 @@ For more background on MCR:
 
 ## Providing Feedback
 
-Please [open issues](https://github.com/microsoft/containerregistry/issues) to provide your feedback on usage, suggestions or concerns with MCR.
+Please [open issues](https://github.com/microsoft/containerregistry/issues) to provide your feedback on usage, as well as any suggestions or concerns with MCR.
 
 # FAQ
 * How does MCR work with Dockerhub?  MCR is a public registry that houses Microsoft Published images but it does not have its own catalog UI experience. Docker Hub is the official source for our customers to discover official Microsoft-published container images. For further details of this integration please visit our [blog](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)
