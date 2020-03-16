@@ -34,7 +34,7 @@ To access MCR, the following FQDNs are required.
 | Data Endpoint | https | `*.cdn.mscr.io` | Now |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` | Starting June  15, 2020 |
 
-If you're updating this prior to June 15th, adding both date endpoints will assure a smooth transition. Once the consolidated data endpoint deployment is complete, we'll update this page enabling the removal of `*.cdn.mscr.io`.
+If you're updating this prior to June 15th, adding both data endpoints will assure a smooth transition. Once the consolidated data endpoint deployment is complete, we'll update this page enabling the removal of `*.cdn.mscr.io`.
 
 ![Azure Application Rule](./media/mcr-client-firewall-rules.png)
 
