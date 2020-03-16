@@ -12,7 +12,7 @@ MCR is an implementation of the [OCI Distribution Specification][oci-spec] which
 - [Registry FQDN Endpoints](#registry-fqdn-endpoints)
 - [Testing the `*.cdn.mscr.io` Data Endpoint](#testing-the-cdnmscrio-data-endpoint)
 - [Testing the `*.data.mcr.microsoft.com` Data Endpoint](#testing-the-datamcrmicrosoftcom-data-endpoint)
-- [Q&A](#q&a)
+- [Q&A](#qa)
 - [Rollout Status](#rollout-status)
 
 ## Configuring Client Firewall Rules
@@ -106,7 +106,7 @@ During the multi-region deployment, we discovered AKS node scaling and service u
 As of March 13, 2020, all regions have been rolled back with data endpoints being served from `*.cdn.mscr.io`
 
 To minimize disruptions, allowing teams to focus on other matters, the MCR team has extended the change date to June 15, 2020.  
-*See [Q&A](#q&a) above*
+*See [Q&A](#qa) above*
 
 More information on the [Microsoft Container Registry][mcr]
 
