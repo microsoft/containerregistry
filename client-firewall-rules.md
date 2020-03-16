@@ -40,7 +40,7 @@ If you're updating this prior to June 15th, adding both data endpoints will assu
 
 ## Testing the `*.cdn.mscr.io` Data Endpoint
 
-To validate configurations pre March 3rd, 2020, the following multi-arch images are available for testing. 
+To validate configurations pre June 15th, 2020, the following multi-arch images are available for testing. 
 
 ### Windows & Linux
 To test pulling an image:  
@@ -56,7 +56,7 @@ produces a url with `[oldRegionReference].cdn.mscr.io` :
 
 ## Testing the `*.data.mcr.microsoft.com` Data Endpoint
 
-To validate changes will work post March 3rd, 2020, the following images are available for testing today.
+To validate changes will work post June 15, 2020, the following images are available for testing today.
 
 **Note:** Separate repos for Windows and Linux are provided for verification:
 
