@@ -86,11 +86,11 @@ produces a url with `[region].data.mcr.microsoft.com` :
 
 ### Q&A
 - **Q: What do I do now, to prepare for this change?**  
-  **A:** Follow the above guidance, adding both data endpoints. 
+  **A:** If you require client firewall rules, follow the above guidance, adding both data endpoints to your outbound firewall rules. If you do not use outbound firewall rules, no change is necessary.
 - **Q: Are there any risks to adding both endpoints?**  
   **A:** Both data endpoints are owned and maintained by Microsoft. Both are secure. Adding both domains eases the transition.
 - **Q: If both domains are secure, why are you making this change?**  
-  **A:** We've received feedback that having multiple root domains is confusing as it's not obvious that registries require multiple endpoints. Putting both endpoints under `microsoft.com` provides more trust and confidence these are operated by Microsoft.
+  **A:** We've received feedback that having multiple root domains is confusing as it's not obvious that registries require multiple endpoints. Putting both endpoints under `microsoft.com` provides more trust and confidence that these are operated by Microsoft.
 - **Q: How can I test my firewall configurations before the change?"**  
   **A:** See [Testing the `*.data.mcr.microsoft.com` Data Endpoint](#testing-the-datamcrmicrosoftcom-data-endpoint) above.
 
