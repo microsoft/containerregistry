@@ -98,6 +98,10 @@ produces a url with `[region].data.mcr.microsoft.com` :
 - **Q: How can I test my firewall configurations before the change?"**  
   **A:** See [Testing the `*.data.mcr.microsoft.com` Data Endpoint](#testing-the-datamcrmicrosoftcom-data-endpoint) above.
 
+## Support
+
+To contact Microsoft Support: [azure.microsoft.com/support/create-ticket/](https://azure.microsoft.com/support/create-ticket/).
+
 ## Rollout Status
 
 ### June 15, 2020
