@@ -17,7 +17,7 @@ MCR is an implementation of the [OCI Distribution Specification][oci-spec] which
 
 ## Configuring Client Firewall Rules
 
-> ### **PROACTIVE DATA ENDPOINT SECUIRTY CHANGE**
+> ### **PROACTIVE DATA ENDPOINT SECURITY CHANGE**
 >
 > **Rollouts have begun.**  See [Rollout Status](#rollout-status) for regional deployments.
 >
@@ -90,7 +90,8 @@ produces a url with `[region].data.mcr.microsoft.com` :
 ### Q&A
 
 - **Q: If both domains are secure, why are you making this change?**  
-  **A:** We've received feedback that multiple root domains, questionable security practices and confusing and it’s not obvious registries require multiple endpoints. To proactively address any potential security issues that may arise in future, we are putting both endpoints under `microsoft.com` resulting in more trust and confidence that these are operated by Microsoft.
+  **A:** We've received feedback that having multiple root domains is confusing as it's not obvious that registries require multiple endpoints. To proactively address any potential security issues we are putting both endpoints under `microsoft.com` providing more trust and confidence that these are operated by Microsoft.
+
 - **Q: What should I do to prepare for this change?**  
   **A:** If you require client firewall rules, follow the above guidance, adding both data endpoints to your outbound firewall rules. If you do not use outbound firewall rules, no change is necessary.
 - **Q: Are there any risks to adding both endpoints?**  
