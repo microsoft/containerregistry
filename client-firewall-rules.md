@@ -17,11 +17,11 @@ MCR is an implementation of the [OCI Distribution Specification][oci-spec] which
 
 ## Configuring Client Firewall Rules
 
-> ### **DATA ENDPOINT CHANGE**
+> ### **PROACTIVE DATA ENDPOINT SECUIRTY CHANGE**
 >
 > **Rollouts have begun.**  See [Rollout Status](#rollout-status) for regional deployments.
 >
-> To provide a consistent FQDN between the REST and data endpoints, beginning **June 15, 2020** the data endpoint will change from `*.cdn.mscr.io` to `*.data.mcr.microsoft.com`
+> To proactively address security risks and concerns, MCR will provide a consistent FQDN between the REST and data endpoints. Beginning **June 15, 2020** the data endpoint will change from `*.cdn.mscr.io` to `*.data.mcr.microsoft.com`
 
 ## Registry FQDN Endpoints
 
@@ -33,7 +33,7 @@ To access MCR, the following FQDNs are required.
 | Data Endpoint | https | `*.cdn.mscr.io` | Now |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` | Starting June  15, 2020 |
 
-If you're updating this prior to June 15th, adding both data endpoints will assure a smooth transition. Once the consolidated data endpoint deployment is complete, we'll update this page enabling the removal of `*.cdn.mscr.io`.
+If you're updating this before the transition is complete, adding both data endpoints will assure a smooth transition. Once the deployment is complete, we'll update this page enabling the removal of `*.cdn.mscr.io`. We recommend keeping both endpoints for a few weeks post the change to account for any extra ordinary situation where we might have to rollback.
 
 ![Azure Application Rule](./media/mcr-client-firewall-rules.png)
 
@@ -89,12 +89,12 @@ produces a url with `[region].data.mcr.microsoft.com` :
 
 ### Q&A
 
-- **Q: What do I do now, to prepare for this change?**  
+- **Q: If both domains are secure, why are you making this change?**  
+  **A:** We've received feedback that multiple root domains, questionable security practices and confusing and it’s not obvious registries require multiple endpoints. To proactively address any potential security issues that may arise in future, we are putting both endpoints under `microsoft.com` resulting in more trust and confidence that these are operated by Microsoft.
+- **Q: What should I do to prepare for this change?**  
   **A:** If you require client firewall rules, follow the above guidance, adding both data endpoints to your outbound firewall rules. If you do not use outbound firewall rules, no change is necessary.
 - **Q: Are there any risks to adding both endpoints?**  
   **A:** Both data endpoints are owned and maintained by Microsoft. Both are secure. Adding both domains eases the transition.
-- **Q: If both domains are secure, why are you making this change?**  
-  **A:** We've received feedback that having multiple root domains is confusing as it's not obvious that registries require multiple endpoints. Putting both endpoints under `microsoft.com` provides more trust and confidence that these are operated by Microsoft, with a single root domain.
 - **Q: How can I test my firewall configurations before the change?"**  
   **A:** See [Testing the `*.data.mcr.microsoft.com` Data Endpoint](#testing-the-datamcrmicrosoftcom-data-endpoint) above.
 
@@ -104,7 +104,7 @@ To contact Microsoft Support: [azure.microsoft.com/support/create-ticket/](https
 
 ## Rollout Status
 
-### June 15, 2020
+### June 19, 2020
 
 MCR Data Endpoint changes rolling out.
 The following chart represents regional rollout, following [Azure Safe Deployment Practices](https://azure.microsoft.com/en-us/blog/advancing-safe-deployment-practices). For this impactful change, we will take a pause between regions to monitor customer feedback.
@@ -114,7 +114,7 @@ The following chart represents regional rollout, following [Azure Safe Deploymen
 | 6/12/2020 - Friday    | EUAP Central US | N/A                                  | Complete |
 | 6/13/2020 - Saturday  | EUAP East US2   | N/A                                  | Complete |
 | 6/15/2020 - Monday    | West Central US | westcentralus.data.mcr.microsoft.com | Complete |
-| 6/18/2020 - Thursday  | West US         | westus.data.mcr.microsoft.com        | Queued   |
+| 6/18/2020 - Thursday  | West US         | westus.data.mcr.microsoft.com        | Complete |
 | 6/22/2020 - Monday    | East US         | eastus.data.mcr.microsoft.com        | Queued   |
 |                       | North Europe    | northeurope.data.mcr.microsoft.com   | Queued   |
 |                       | Southeast Asia  | southeastasia.data.mcr.microsoft.com | Queued   |
