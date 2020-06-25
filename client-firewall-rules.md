@@ -19,9 +19,9 @@ MCR is an implementation of the [OCI Distribution Specification][oci-spec] which
 
 > ### **PROACTIVE DATA ENDPOINT SECURITY CHANGE**
 >
-> **Rollouts have begun.**  See [Rollout Status](#rollout-status) for regional deployments.
+> **Rollouts have completed.**  See [Rollout Status](#rollout-status) for regional deployments.
 >
-> To proactively address security risks and concerns, MCR will provide a consistent FQDN between the REST and data endpoints. Beginning **June 15, 2020** the data endpoint will change from `*.cdn.mscr.io` to `*.data.mcr.microsoft.com`
+> To proactively address security risks and concerns, MCR will provide a consistent FQDN between the REST and data endpoints. Beginning **June 15, 2020** the data endpoints have changed from `*.cdn.mscr.io` to `*.data.mcr.microsoft.com`
 
 ## Registry FQDN Endpoints
 
@@ -104,6 +104,29 @@ produces a url with `[region].data.mcr.microsoft.com` :
 To contact Microsoft Support: [azure.microsoft.com/support/create-ticket/](https://azure.microsoft.com/support/create-ticket/).
 
 ## Rollout Status
+
+### June 25, 2020
+
+MCR Data Endpoint changes complete!
+
+Following [Azure Safe Deployment Practices](https://azure.microsoft.com/en-us/blog/advancing-safe-deployment-practices), all MCR regional endpoints have now been updated.
+
+> **Note:** mcr uses regional CDN to provide global coverage. You will not see every Azure Data Center listed.
+> Over time, MCR regional endpoints _will change_ assuring the best performance for our customers. It is strongly recommended to use `*.data.mcr.microsoft.com` for firewall rules to avoid disruption as we alter regions for performance & readability.
+
+| Date                  | Regions         | Data Endpoints                       | Status   |
+| -                     | -               | -                                    | -        |
+| 6/12/2020 - Friday    | EUAP Central US | N/A                                  | Complete |
+| 6/13/2020 - Saturday  | EUAP East US2   | N/A                                  | Complete |
+| 6/15/2020 - Monday    | West Central US | westcentralus.data.mcr.microsoft.com | Complete |
+| 6/18/2020 - Thursday  | West US         | westus.data.mcr.microsoft.com        | Complete |
+| 6/22/2020 - Monday    | East US         | eastus.data.mcr.microsoft.com        | Complete |
+|                       | North Europe    | northeurope.data.mcr.microsoft.com   | Complete |
+|                       | Southeast Asia  | southeastasia.data.mcr.microsoft.com | Complete |
+| 6/24/2020 - Wednesday | West US2        | westcentralus.data.mcr.microsoft.com | Complete |
+|                       | Central US      | centralus.data.mcr.microsoft.com     | Complete |
+|                       | East Asia       | eastasia.data.mcr.microsoft.com      | Complete |
+|                       | West Europe     | westeurope.data.mcr.microsoft.com    | Complete |
 
 ### June 19, 2020
 
