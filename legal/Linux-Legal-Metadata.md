@@ -41,45 +41,32 @@ Note: The output of the commands is intentionally cut-off for purposes of brevit
 
 You can retrieve the full list of packages installed within Alpine images, as demonstrated below.
 
+```
 $ docker run --rm alpine:3.11 apk list -I
-
 musl-1.1.24-r0 x86_64 {musl} (MIT) [installed]
-
 zlib-1.2.11-r3 x86_64 {zlib} (Zlib) [installed]
-
 apk-tools-2.10.4-r3 x86_64 {apk-tools} (GPL2) [installed]
-
 musl-utils-1.1.24-r0 x86_64 {musl} (MIT BSD GPL2+) [installed]
-
 libssl1.1-1.1.1d-r2 x86_64 {openssl} (OpenSSL) [installed]
-
 alpine-baselayout-3.2.0-r3 x86_64 {alpine-baselayout} (GPL-2.0-only) [installed]
-
 alpine-keys-2.1-r2 x86_64 {alpine-keys} (MIT) [installed]
-
 busybox-1.31.1-r8 x86_64 {busybox} (GPL-2.0-only) [installed]
-
 scanelf-1.2.4-r0 x86_64 {pax-utils} (GPL-2.0-only) [installed]
-
 libc-utils-0.7.2-r0 x86_64 {libc-dev} (BSD) [installed]
-
 libtls-standalone-2.9.1-r0 x86_64 {libtls-standalone} (ISC) [installed]
-
 ssl_client-1.31.1-r8 x86_64 {busybox} (GPL-2.0-only) [installed]
-
 ca-certificates-cacert-20191127-r0 x86_64 {ca-certificates} (MPL-2.0 GPL-2.0-or-later) [installed]
-
 libcrypto1.1-1.1.1d-r2 x86_64 {openssl} (OpenSSL) [installed]
+```
 
 The package listing above includes the license in the fourth cell. You can also retrieve the license for any single package, as demonstrated below. This example retrieves the musl license from the alpine:3.11 image.
 
+```
 $ docker run --rm alpine:3.11 apk info --license musl
-
 musl-1.1.24-r0 license:
-
 MIT
-
 You can retrieve the source for any package by looking up the package on the [alpine package website](https://pkgs.alpinelinux.org/packages). You must enter the package name, branch (which corresponds to the Alpine version), and architecture. Finding the [information for the zlib package](https://pkgs.alpinelinux.org/packages?name=zlib&branch=v3.11&repo=main&arch=x86) is demonstrated below.
+```
 
 Navigating the [Package link](https://pkgs.alpinelinux.org/package/v3.11/main/x86/zlib) will show detailed package information including the originating source amongst other information.
 
@@ -87,39 +74,25 @@ Navigating the [Package link](https://pkgs.alpinelinux.org/package/v3.11/main/x8
 
 You can retrieve the full list of packages installed within Debian images, as demonstrated below.
 
+```
 $ docker run --rm debian:buster-slim dpkg-query -l
-
 Desired=Unknown/Install/Remove/Purge/Hold
-
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-
 ||/ Name Version Architecture Description
-
 +++-=======================-======================-============-========================================================================
-
 ii adduser 3.118 all add and remove users and groups
-
 ii apt 1.8.2 amd64 commandline package manager
-
 ii base-files 10.3+deb10u2 amd64 Debian base system miscellaneous files
-
 ii base-passwd 3.5.46 amd64 Debian base system master password and group files
-
 ii bash 5.0-4 amd64 GNU Bourne Again SHell
-
 ii bsdutils 1:2.33.1-0.1 amd64 basic utilities from 4.4BSD-Lite
-
 ii coreutils 8.30-3 amd64 GNU core utilities
-
 ii dash 0.5.10.2-5 amd64 POSIX-compliant shell
-
 ii debconf 1.5.71 all Debian configuration management system
-
 ii debian-archive-keyring 2019.1 all GnuPG archive keys of the Debian archive
-
 ...
+```
 
 You can retrieve the license for any package, as demonstrated below. This example retrieves the apt license from the debian:buster-slim image by performing the following steps with a single command:
 
@@ -127,90 +100,69 @@ You can retrieve the license for any package, as demonstrated below. This exampl
 2.  Find the copyright file
 3.  Print out the copyright file contents
 
+```
 $ docker run --rm debian:buster-slim sh -c 'cat `dpkg -L apt | grep copyright`'
 
 Apt is copyright 1997, 1998, 1999 Jason Gunthorpe and others.
 
 Apt is currently developed by APT Development Team <deity@lists.debian.org>.
-
 License: GPLv2+
 
 This program is free software; you can redistribute it and/or modify
-
 it under the terms of the GNU General Public License as published by
-
 the Free Software Foundation; either version 2 of the License, or
-
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
-
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-
 along with this program; if not, write to the Free Software
-
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 See /usr/share/common-licenses/GPL-2, or
-
 <http://www.gnu.org/copyleft/gpl.txt> for the terms of the latest version
-
 of the GNU General Public License.
+```
 
 You can retrieve the source for package, as demonstrated below. This example retrieves the apt source from the debian:buster-slim image by performing the following steps with a single command:
 
 1.  Add the source feeds for the existing package feeds.
 2.  Utilize the [apt-get](https://manpages.debian.org/buster/apt/apt-get.8.en.html) tool to print out the URIs of archive files that contain the package source. See the [apt-get source](https://manpages.debian.org/buster/apt/apt-get.8.en.html) documentation for additional options.
 
+```
 $ docker run --rm debian:buster-slim sh -c "find /etc/apt/sources.list* -type f -exec sed -i -e 'p; s/^deb /deb-src /' '{}' + && apt-get update -qq && apt-get source -qq --print-uris apt=1.8.2"
 
 'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.dsc' apt_1.8.2.dsc 2766 SHA256:891cc952f028b79e2eace3db6c19d55dee247ac19d934bbe43c3921104b01c3b
 
 'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.tar.xz' apt_1.8.2.tar.xz 2188344 SHA256:7f9a91c26624bc85733683ee239b0c0d971a593d670855cf7bcf693b08a37734
+```
 
 **ubuntu**
 
 You can retrieve the full list of packages installed within Ubuntu images, as demonstrated below.
 
+```
 $ docker run --rm ubuntu:bionic dpkg-query -l
-
 Desired=Unknown/Install/Remove/Purge/Hold
-
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-
 ||/ Name Version Architecture Description
-
 +++-=================================-=====================-=====================-=======================================================================
-
 ii adduser 3.116ubuntu1 all add and remove users and groups
-
 ii apt 1.6.12 amd64 commandline package manager
-
 ii base-files 10.1ubuntu2.7 amd64 Debian base system miscellaneous files
-
 ii base-passwd 3.5.44 amd64 Debian base system master password and group files
-
 ii bash 4.4.18-2ubuntu1.2 amd64 GNU Bourne Again SHell
-
 ii bsdutils 1:2.31.1-0.4ubuntu3.4 amd64 basic utilities from 4.4BSD-Lite
-
 ii bzip2 1.0.6-8.1ubuntu0.2 amd64 high-quality block-sorting file compressor - utilities
-
 ii coreutils 8.28-1ubuntu1 amd64 GNU core utilities
-
 ii dash 0.5.8-2.10 amd64 POSIX-compliant shell
-
 ii debconf 1.5.66ubuntu1 all Debian configuration management system
-
 ...
+```
 
 You can retrieve the license for any package, as demonstrated below. This example retrieves the apt license from the ubuntu:bionic image by performing the following steps with a single command:
 
@@ -218,52 +170,44 @@ You can retrieve the license for any package, as demonstrated below. This exampl
 2.  Find the copyright file
 3.  Print out the copyright file contents
 
+```
 $ docker run --rm ubuntu:bionic sh -c 'cat `dpkg -L apt | grep copyright`'
 
 Apt is copyright 1997, 1998, 1999 Jason Gunthorpe and others.
 
 Apt is currently developed by APT Development Team <deity@lists.debian.org>.
-
 License: GPLv2+
 
 This program is free software; you can redistribute it and/or modify
-
 it under the terms of the GNU General Public License as published by
-
 the Free Software Foundation; either version 2 of the License, or
-
 (at your option) any later version.
-
 This program is distributed in the hope that it will be useful,
-
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-
 along with this program; if not, write to the Free Software
-
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 See /usr/share/common-licenses/GPL-2, or
-
 <http://www.gnu.org/copyleft/gpl.txt> for the terms of the latest version
-
 of the GNU General Public License.
+```
 
 You can retrieve the source for package, as demonstrated below. This example retrieves the apt source from the ubuntu:bionic image by performing the following steps with a single command:
 
 1.  Add the source feeds for the existing package feeds.
 2.  Utilize the [apt-get](https://manpages.debian.org/buster/apt/apt-get.8.en.html) tool to print out the URIs of archive files that contain the package source. See the [apt-get source](https://manpages.debian.org/buster/apt/apt-get.8.en.html) documentation for additional options.
 
+```
 $ docker run --rm ubuntu:bionic sh -c "find /etc/apt/sources.list* -type f -exec sed -i -e 'p; s/^deb /deb-src /' '{}' + && apt-get update -qq && apt-get source -qq --print-uris apt=1.6.12"
 
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12.dsc' apt_1.6.12.dsc 2796 SHA256:061d7de8e9faea48b69b37f01a54b2eac04d39eaab143ec4ffb7cd534fa01cfd
 
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12.tar.xz' apt_1.6.12.tar.xz 2171176 SHA256:d4e2ae405a1ff12bd108a5a530a24d52afde9cde40065ed508fdea33302c8a35
+```
 
 **buildpack-deps**
 
@@ -284,6 +228,7 @@ An abbreviated copy of the "extended information" for the debian:buster-slim ima
 
 **debian:buster-slim (remote)**
 
+```
 $ docker pull debian@sha256:e4c1417236abc57971755ca2bfccd546cbca45b33daf66001a5addae4bf78517
 
 *   Manifest MIME: application/vnd.docker.distribution.manifest.list.v2+json
@@ -295,9 +240,11 @@ $ docker pull debian@sha256:e4c1417236abc57971755ca2bfccd546cbca45b33daf66001a5a
     *   linux; 386
     *   linux; ppc64le
     *   linux; s390x
+```
 
 **debian:buster-slim - linux; amd64**
 
+```
 $ docker pull debian@sha256:0c679627b3a61b2e3ee902ec224b0505839bc2ad76d99530e5f0566e47ac8400
 
 *   Docker Version: 18.06.1-ce
@@ -322,11 +269,13 @@ CMD ["bash"]
     *   MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ...
+```
 
 **debian:buster-slim (local)**
 
 **Docker Metadata**
 
+```
 *   Image ID: sha256:e1af56d072b8d93fce4b566f4bf76311108dbbbe952b12a85418bd32c2fcdda7
 *   Created: 2019-12-28T04:21:23.037912523Z
 *   Virtual Size: ~ 69.21 Mb  
@@ -350,9 +299,11 @@ Licenses: (parsed from: /usr/share/doc/libacl1/copyright)
 *   GPL-2+
 *   LGPL-2+
 *   LGPL-2.1
+```
 
 Source:
 
+```
 $ apt-get source -qq --print-uris acl=2.2.53-4
 
 'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-4.dsc' acl_2.2.53-4.dsc 2330 SHA256:532eb4029659db74e6625adc2bd277144f33c92cb0603272d61693b069896a85
@@ -362,6 +313,7 @@ $ apt-get source -qq --print-uris acl=2.2.53-4
 'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53.orig.tar.gz.asc' acl_2.2.53.orig.tar.gz.asc 833 SHA256:06849bece0b56a6a7269173abe101cff223bb9346d74027a3cd5ff80914abf4b
 
 'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-4.debian.tar.gz.asc' acl_2.2.53-4.debian.tar.xz 18572 SHA256:3e6571adea4886a9549bdc2323d5c55ee8f7dafb6a204513111d5943d2776dd8
+```
 
 Other potentially useful URLs:
 
@@ -396,32 +348,22 @@ Images often install a set of packages (from the associated package manager for 
 
 You can see an example of the additional packages the .NET Core images install in this [runtime-deps](https://hub.docker.com/_/microsoft-dotnet-core-runtime-deps) Dockerfile, which is copied below (see RUN apt-get instruction).
 
+```
 FROM debian:buster-slim
-
 RUN apt-get update \
-
 && apt-get install -y --no-install-recommends \
-
 ca-certificates \
-
 \
 
 # .NET Core dependencies
 
 libc6 \
-
 libgcc1 \
-
 libgssapi-krb5-2 \
-
 libicu63 \
-
 libssl1.1 \
-
 libstdc++6 \
-
 zlib1g \
-
 && rm -rf /var/lib/apt/lists/*
 
 # Configure web servers to bind to port 80 when present
@@ -431,9 +373,11 @@ ENV ASPNETCORE_URLS=http://+:80 \
 # Enable detection of running in a container
 
 DOTNET_RUNNING_IN_CONTAINER=true
+```
 
 There is no guarantee that these additional packages are not present in the base image, but typically they will not be (hence why they are explicitly installed), as is demonstrated below.
 
+```
 $ docker run --rm debian:buster-slim apt list ca-certificates
 
 Listing...
@@ -443,5 +387,6 @@ $ docker run --rm mcr.microsoft.com/dotnet/core/runtime-deps:3.1-buster-slim apt
 Listing...
 
 ca-certificates/now 20190110 all [installed,local]
+```
 
 The patterns for [Retrieving Package Information From Base Images](https://github.com/microsoft/oss-law-central/blob/master/image-artifact-details.md#retrieving-package-information-from-base-images) can be repeated for packages that are added in .NET Core images (above and beyond the base image).
