@@ -10,7 +10,7 @@ MCR is an implementation of the [OCI Distribution Specification][oci-spec] which
 To access MCR, the following FQDNs are required.
 
 | Purpose | Protocol | Target FQDN |
-| - | - | - | - |
+| - | - | - |
 | Registry Endpoint | https | `mcr.microsoft.com` |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` |
 
