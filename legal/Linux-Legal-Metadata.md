@@ -389,4 +389,4 @@ Listing...
 ca-certificates/now 20190110 all [installed,local]
 ```
 
-The patterns for [Retrieving Package Information From Base Images](https://github.com/microsoft/oss-law-central/blob/master/image-artifact-details.md#retrieving-package-information-from-base-images) can be repeated for packages that are added in .NET Core images (above and beyond the base image).
+These patterns can be repeated for packages that are added in [.NET Core images (above and beyond the base image)](https://github.com/dotnet/dotnet-docker/blob/master/documentation/image-artifact-details.md).
