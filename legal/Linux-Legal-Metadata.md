@@ -1,4 +1,4 @@
-**Instructions for Finding Linux Legal Metadata**
+# Instructions for Finding Linux Legal Metadata
 
 *(Licenses, Copyright and Source Code)*
 
@@ -13,14 +13,14 @@ This document answers two basic questions:
 *   How can I interrogate a Linux image to determine licensing and version information for the Linux base image and packages pulled in by the Linux distribution's official package manager?
 *   Where can I look to learn about source pedigree information for a Linux image and its official packages from external sources (since it is difficult/impossible to learn everything from an image)?
 
-This document uses .NET Core as an example throughout, to demonstrate how to find license information for a variety of Linux distros. These distros are not uniform, which is why looking at multiple examples is useful. You can find the artifacts that will be used as examples at: [.NET Core Docker files](https://github.com/dotnet/dotnet-docker) and [.NET Core container images](https://hub.docker.com/_/microsoft-dotnet-core/).
+This document uses .NET Core as an example throughout, to demonstrate how to find license information for a variety of Linux distros. These distros are not uniform, which is why looking at multiple examples is useful. You can find the artifacts that will be used as examples at: [.NET Core Docker files](https://github.com/dotnet/dotnet-docker) and [.NET Core container images](https://hub.docker.com/_/microsoft-dotnet/).
 
 This document describes the licensing and source pedigree of the following components:
 
 *   [Base images](https://github.com/microsoft/oss-law-central/blob/master/image-artifact-details.md#Base-Images) (from Docker Hub)
 *   [Additional official packages](https://github.com/microsoft/oss-law-central/blob/master/image-artifact-details.md#Additional-Packages) (from Linux package managers)
 
-**Base Images**
+## Base Images
 
 Images are provided for a set of Linux distros, delivered via [MCR](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) (and advertised on Docker Hub). The Linux distros are acquired from Docker Hub as part of building the images. The following base images are delivered as components of the .NET Core images:
 
@@ -31,13 +31,13 @@ Images are provided for a set of Linux distros, delivered via [MCR](https://azur
 
 .NET Core is dependent on those images, and the individuals/organizations that build them, to satisfactorily describe the licensing and pedigree of these images.
 
-**Retrieving Package Information From Base Images**
+### Retrieving Package Information From Base Images
 
 The practices to retrieve package information vary across the dependent distro types. This is demonstrated via the following introspection technique, for each of the supported distros.
 
 Note: The output of the commands is intentionally cut-off for purposes of brevity. The output you see below is intended to demonstrate the pattern, and you can repeat it to view all current license information for the base image of your choosing.
 
-**alpine**
+#### alpine
 
 You can retrieve the full list of packages installed within Alpine images, as demonstrated below.
 
@@ -70,7 +70,7 @@ You can retrieve the source for any package by looking up the package on the [al
 
 Navigating the [Package link](https://pkgs.alpinelinux.org/package/v3.11/main/x86/zlib) will show detailed package information including the originating source amongst other information.
 
-**debian**
+#### debian
 
 You can retrieve the full list of packages installed within Debian images, as demonstrated below.
 
@@ -140,7 +140,7 @@ $ docker run --rm debian:buster-slim sh -c "find /etc/apt/sources.list* -type f 
 'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.tar.xz' apt_1.8.2.tar.xz 2188344 SHA256:7f9a91c26624bc85733683ee239b0c0d971a593d670855cf7bcf693b08a37734
 ```
 
-**ubuntu**
+#### ubuntu
 
 You can retrieve the full list of packages installed within Ubuntu images, as demonstrated below.
 
@@ -209,11 +209,11 @@ $ docker run --rm ubuntu:bionic sh -c "find /etc/apt/sources.list* -type f -exec
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12.tar.xz' apt_1.6.12.tar.xz 2171176 SHA256:d4e2ae405a1ff12bd108a5a530a24d52afde9cde40065ed508fdea33302c8a35
 ```
 
-**buildpack-deps**
+#### buildpack-deps
 
 The Debian and Ubuntu variants of [buildpack-deps](https://hub.docker.com/_/buildpack-deps) are used as base images, enabling you to use the same patterns described above to retrieve the licensing information for these images.
 
-**Retrieving Pedigree Information for Base Images**
+### Retrieving Pedigree Information for Base Images**
 
 The base images are retrieved from official Docker image repositories which provide detailed information about the images. This information includes layer information, source code, license information, etc. This information is stored in the [Official Images "Extended Information" repository](https://github.com/docker-library/repo-info) and is split into two types:
 
@@ -226,7 +226,7 @@ The base images are retrieved from official Docker image repositories which prov
 
 An abbreviated copy of the "extended information" for the debian:buster-slim image is included below, first the [remote](https://github.com/docker-library/repo-info/blob/master/repos/debian/remote/buster-slim.md) and then the [local](https://github.com/docker-library/repo-info/blob/master/repos/debian/local/buster-slim.md) information.
 
-**debian:buster-slim (remote)**
+#### debian:buster-slim (remote)
 
 ```
 $ docker pull debian@sha256:e4c1417236abc57971755ca2bfccd546cbca45b33daf66001a5addae4bf78517
@@ -242,7 +242,7 @@ $ docker pull debian@sha256:e4c1417236abc57971755ca2bfccd546cbca45b33daf66001a5a
     *   linux; s390x
 ```
 
-**debian:buster-slim - linux; amd64**
+#### debian:buster-slim - linux; amd64
 
 ```
 $ docker pull debian@sha256:0c679627b3a61b2e3ee902ec224b0505839bc2ad76d99530e5f0566e47ac8400
@@ -271,7 +271,7 @@ CMD ["bash"]
 ...
 ```
 
-**debian:buster-slim (local)**
+#### debian:buster-slim (local)
 
 **Docker Metadata**
 
@@ -325,7 +325,7 @@ Other potentially useful URLs:
 
 ...
 
-**Pedigree Information for Base Images**
+## Pedigree Information for Base Images
 
 The following links provide the pedigree information for the Linux base images.
 
@@ -342,11 +342,11 @@ The following links provide the pedigree information for the Linux base images.
     *   [local](https://github.com/docker-library/repo-info/blob/master/repos/buildpack-deps/local/)
     *   [remote](https://github.com/docker-library/repo-info/blob/master/repos/buildpack-deps/remote/)
 
-**Additional Packages**
+### Additional Packages
 
 Images often install a set of packages (from the associated package manager for the distro) in addition the the package provided by the base image. You can inspect the Dockerfiles to discover these additional packages.
 
-You can see an example of the additional packages the .NET Core images install in this [runtime-deps](https://hub.docker.com/_/microsoft-dotnet-core-runtime-deps) Dockerfile, which is copied below (see RUN apt-get instruction).
+You can see an example of the additional packages the .NET Core images install in this [runtime-deps](https://hub.docker.com/_/microsoft-dotnet-runtime-deps) Dockerfile, which is copied below (see RUN apt-get instruction).
 
 ```
 FROM debian:buster-slim
@@ -389,4 +389,4 @@ Listing...
 ca-certificates/now 20190110 all [installed,local]
 ```
 
-The patterns for [Retrieving Package Information From Base Images](https://github.com/microsoft/oss-law-central/blob/master/image-artifact-details.md#retrieving-package-information-from-base-images) can be repeated for packages that are added in .NET Core images (above and beyond the base image).
+These patterns can be repeated for packages that are added in [.NET Core images (above and beyond the base image)](https://github.com/dotnet/dotnet-docker/blob/master/documentation/image-artifact-details.md).
