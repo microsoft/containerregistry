@@ -13,7 +13,7 @@ This document answers two basic questions:
 *   How can I interrogate a Linux image to determine licensing and version information for the Linux base image and packages pulled in by the Linux distribution's official package manager?
 *   Where can I look to learn about source pedigree information for a Linux image and its official packages from external sources (since it is difficult/impossible to learn everything from an image)?
 
-This document uses .NET Core as an example throughout, to demonstrate how to find license information for a variety of Linux distros. These distros are not uniform, which is why looking at multiple examples is useful. You can find the artifacts that will be used as examples at: [.NET Core Docker files](https://github.com/dotnet/dotnet-docker) and [.NET Core container images](https://hub.docker.com/_/microsoft-dotnet-core/).
+This document uses .NET Core as an example throughout, to demonstrate how to find license information for a variety of Linux distros. These distros are not uniform, which is why looking at multiple examples is useful. You can find the artifacts that will be used as examples at: [.NET Core Docker files](https://github.com/dotnet/dotnet-docker) and [.NET Core container images](https://hub.docker.com/_/microsoft-dotnet/).
 
 This document describes the licensing and source pedigree of the following components:
 
@@ -346,7 +346,7 @@ The following links provide the pedigree information for the Linux base images.
 
 Images often install a set of packages (from the associated package manager for the distro) in addition the the package provided by the base image. You can inspect the Dockerfiles to discover these additional packages.
 
-You can see an example of the additional packages the .NET Core images install in this [runtime-deps](https://hub.docker.com/_/microsoft-dotnet-core-runtime-deps) Dockerfile, which is copied below (see RUN apt-get instruction).
+You can see an example of the additional packages the .NET Core images install in this [runtime-deps](https://hub.docker.com/_/microsoft-dotnet-runtime-deps) Dockerfile, which is copied below (see RUN apt-get instruction).
 
 ```
 FROM debian:buster-slim
