@@ -10,10 +10,10 @@ ms.custom:
 
 # Guidance for using the official Microsoft Container Registry (MCR) endpoints
 
-Microsoft Container Registry (MCR) is an implementation of the [OCI Distribution Specification][oci-spec] which delivers [artifacts][oci-artifacts], such as container images, helm charts and other assets distributed by Microsoft and Azure. The Distribution Spec linked above defines two endpoints:
+Microsoft Container Registry (MCR) is an implementation of the [OCI Distribution Specification][oci-spec] which delivers [artifacts][oci-artifacts], such as container images, helm charts and other assets distributed by Microsoft. The Distribution Spec linked above defines two endpoints:
 
-- **Registry Endpoint**: providing content discovery. This is also referred to as *REST Endpoint* and it is the endpoint users are most familiar with when pulling an image; for example: `docker pull mcr.microsoft.com/windows/servercore:1909`. The registry endpoint is load balanced across multiple worldwide regions, providing reliable and consistent access to the MCR artifacts catalog.
-- **Data Endpoint**: providing content delivery. As a registry client discovers the content required, it negotiates a set of content urls, pulling from the data endpoint. To provide reliable delivery of content, the data endpoint is backed by regional CDN endpoints.
+- **Registry Endpoint**: Providing content discovery. This is also referred to as *REST Endpoint* and it is the endpoint users are most familiar with when pulling an image; for example: `docker pull mcr.microsoft.com/windows/servercore:1909`. The registry endpoint is load balanced across multiple worldwide regions, providing reliable and consistent access to the MCR artifacts catalog.
+- **Data Endpoint**: Providing content delivery. As a registry client discovers the content required, it negotiates a set of content URLs, pulling from the data endpoint. To provide reliable delivery of content, the data endpoint is backed by regional CDN endpoints.
 
 ## Official FQDNs for MCR
 
@@ -62,4 +62,4 @@ If you experience issues with pulling artifact from MCR, [contact Microsoft Supp
 [azure-cdn-china]:      https://docs.azure.cn/cdn/cdn-pops
 [oci-spec]:             https://github.com/opencontainers/distribution-spec
 [oci-artifacts]:        https://github.com/opencontainers/artifacts
-[mcr-firewall-rules]:   (../client-firewall-rules.md)
+[mcr-firewall-rules]:   ../client-firewall-rules.md
