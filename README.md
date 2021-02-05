@@ -1,6 +1,5 @@
 # Microsoft Container Registry (MCR)
 
-> See [Client Firewall Rules](./client-firewall-rules.md) for an important change on March 3, 2020
 
 Microsoft Container Registry (MCR) is the primary Registry for all Microsoft Published docker images that offers a reliable and trustworthy delivery of container images with a syndicated catalog, while maintaining the quality that customers expect from a  Microsoft product offering. 
 
@@ -13,6 +12,11 @@ For more background on MCR:
 - [Microsoft syndicates container catalog (mcr.microsoft.com)](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)
 - [Improved discovery experience for Microsoft containers on Docker Hub
 ](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)
+
+Additional guidance for use of MCR:
+
+- [Guidance for using the official MCR endpoints](./docs/mcr-endpoints-guidance.md)
+- [Client Firewall Rules](./client-firewall-rules.md)
 
 ## Providing Feedback
 
