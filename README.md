@@ -1,11 +1,6 @@
 # Microsoft Container Registry (MCR)
 
-
 Microsoft Container Registry (MCR) is the primary Registry for all Microsoft Published docker images that offers a reliable and trustworthy delivery of container images with a syndicated catalog, while maintaining the quality that customers expect from a  Microsoft product offering. 
-
-## Browsing MCR Content
-
-The discovery experience for MCR is provided through [dockerhub](https://hub.docker.com/publishers/microsoftowner).
 
 For more background on MCR:
 
@@ -13,16 +8,27 @@ For more background on MCR:
 - [Improved discovery experience for Microsoft containers on Docker Hub
 ](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)
 
-Additional guidance for use of MCR:
+## Browsing MCR Content
+
+The discovery experience for MCR is provided through [dockerhub](https://hub.docker.com/publishers/microsoftowner).
+
+To query the list of repositories within mcr: https://mcr.microsoft.com/v2/_catalog
+
+To query the list of tags, within a repository: `https://mcr.microsoft.com/v2/`*{namespace/repo*}`/tags/list`  
+For example, to retrieve the list of tags for `mcr/hello-world` : https://mcr.microsoft.com/v2/mcr/hello-world/tags/list
+
+## Additional Guidance for the Use of MCR
 
 - [Guidance for using the official MCR endpoints](./docs/mcr-endpoints-guidance.md)
 - [Client Firewall Rules](./client-firewall-rules.md)
+- [Consuming Public Content](https://opencontainers.org/posts/blog/2020-10-30-consuming-public-content/)
 
 ## Providing Feedback
 
 Please [open issues](https://github.com/microsoft/containerregistry/issues) to provide your feedback on usage, as well as any suggestions or concerns with MCR.
 
-# FAQ
+## FAQ
+
 * How does MCR work with Dockerhub?  MCR is a public registry that houses Microsoft Published images but it does not have its own catalog UI experience. Docker Hub is the official source for our customers to discover official Microsoft-published container images. For further details of this integration please visit our [blog](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)
 
 * What is the difference between MCR and ACR(Azure Container Registry)?  MCR is a public registry for housing only Microsoft's official Container images. ACR is a private container registry for housing our customers' container images.
@@ -31,7 +37,7 @@ Please [open issues](https://github.com/microsoft/containerregistry/issues) to p
 
 * Can I Onboard new Images to MCR? No, Given that MCR is meant to host only official Microsoft Container Images, only Internal Microsoft Product teams will be able to onboard images to the registry. Once onboarded, the images are available to all public users.
 
-# Legal Notices
+## Legal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content
 in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
