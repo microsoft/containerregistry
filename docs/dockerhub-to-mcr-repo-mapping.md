@@ -61,7 +61,7 @@ The following table shows the mapping of [/microsoft](https://hub.docker.com/pub
 | [microsoft/cntk-nightly](https://hub.docker.com/_/microsoft-cntk-nightly)| `mcr.microsoft.com/cntk/nightly` |
 | [microsoft/containernetworking-azure-npm](https://hub.docker.com/r/microsoft/containernetworking-azure-npm)| `mcr.microsoft.com/containernetworking/azure-npm` |
 | [microsoft/containernetworking-networkmonitor](https://hub.docker.com/r/microsoft/containernetworking-networkmonitor)| `mcr.microsoft.com/containernetworking/networkmonitor` |
-| microsoft/defaultpublisher| Scheduled for deletion on June 30th, 2021 |
+| [microsoft/defaultpublisher](https://hub.docker.com/r/microsoft/defaultpublisher)| Scheduled for deletion on June 30th, 2021 |
 | [microsoft/dotnet](https://hub.docker.com/_/microsoft-dotnet)| `mcr.microsoft.com/dotnet/sdk` |
 | [microsoft/dotnet-buildtools-prereqs](https://hub.docker.com/r/microsoft/dotnet-buildtools-prereqs)| `mcr.microsoft.com/dotnet-buildtools/prereqs` |
 | [microsoft/dotnet-framework](https://hub.docker.com/_/microsoft-dotnet-framework)| `mcr.microsoft.com/dotnet/framework/sdk` |
