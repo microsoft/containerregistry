@@ -10,7 +10,7 @@ For more background on MAR:
 
 ## Browsing MAR Content
 
-The discovery experience for MAR is provided through the MAR portal on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
+The discovery experience for MAR is provided through the MAR discovery UI on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
 
 1. To query the list of repositories within MAR, visit https://mcr.microsoft.com/
 
@@ -52,7 +52,7 @@ Please [open issues](https://github.com/microsoft/containerregistry/issues) to p
 
 * **Can I browse MAR?**
 
-    Yes, customers can browse the MAR portal at [mcr.microsoft.com](https://mcr.microsoft.com/). Customers can view rich content like descriptions and tag listings for each artifact.
+    Yes, customers can browse the MAR discovery UI at [mcr.microsoft.com](https://mcr.microsoft.com/). Customers can view rich content like descriptions and tag listings for each artifact.
 
 * **Can I Onboard new Images to MAR?** 
 
