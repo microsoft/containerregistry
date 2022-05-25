@@ -12,9 +12,9 @@ For more background on MAR:
 
 The discovery experience for MAR is provided through the MAR discovery UI on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
 
-1. To query the list of repositories within MAR, visit https://mcr.microsoft.com/
+1. To browse the list of repositories within MAR, visit https://mcr.microsoft.com/
 
-2. To query the list of tags, within a repository:
+2. To browse the list of tags, within a repository:
 
     a. Visit https://mcr.microsoft.com/
     
