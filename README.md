@@ -12,10 +12,15 @@ For more background on MAR:
 
 The discovery experience for MAR is provided through the MAR portal on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
 
-To query the list of repositories within MAR: https://mcr.microsoft.com/v2/_catalog
+1. To query the list of repositories within MAR, visit https://mcr.microsoft.com/
 
-To query the list of tags, within a repository: `https://mcr.microsoft.com/v2/`*{namespace/repo*}`/tags/list`  
-For example, to retrieve the list of tags for `mcr/hello-world` : https://mcr.microsoft.com/v2/mcr/hello-world/tags/list
+2. To query the list of tags, within a repository:
+
+    a. Visit https://mcr.microsoft.com/
+    
+    b. Select an artifact from the catalog listing
+
+    c. Select the `Tags` tab to view the list of tags for that particular artifact
 
 ## Additional Guidance for the Use of MAR
 
