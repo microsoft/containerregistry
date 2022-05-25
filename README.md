@@ -10,7 +10,7 @@ For more background on MAR:
 
 ## Browsing MAR Content
 
-The discovery experience for MAR is provided through [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
+The discovery experience for MAR is provided through the MAR portal on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
 
 To query the list of repositories within MAR: https://mcr.microsoft.com/v2/_catalog
 
@@ -39,7 +39,7 @@ Please [open issues](https://github.com/microsoft/containerregistry/issues) to p
 
 * **How does MAR work with Docker Hub?**  
 
-    Docker Hub is one of the official sources for our customers to discover official Microsoft-published container images. For further details of this integration please visit our [blog](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/).
+    MAR is a public registry for housing Microsoft's official artifacts (such as container images). Docker Hub is one of the official sources (in addition to https://mcr.microsoft.com) for our customers to discover official Microsoft-published container images. For further details of this integration please visit our [blog](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/).
 
 * **What is the difference between MAR and ACR (Azure Container Registry)?**  
 

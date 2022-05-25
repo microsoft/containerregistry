@@ -7,11 +7,11 @@ Microsoft Artifact Registry (also known as Microsoft Container Registry or MCR) 
 
 ## Configuring Client Firewall Rules
 
-To access <AR, the following FQDNs are required.
+To access Registry Endpoint and MAR portal, the following FQDNs are required.
 
 | Purpose | Protocol | Target FQDN |
 | - | - | - |
-| Registry Endpoint | https | `mcr.microsoft.com` |
+| Registry Endpoint and MAR portal | https | `mcr.microsoft.com` |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` |
 
 > **Note:** MAR provides global coverage through Azure Traffic Manager for the registry REST endpoint, with regional CDNs for the data endpoints.

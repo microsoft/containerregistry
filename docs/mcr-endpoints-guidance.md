@@ -18,11 +18,11 @@ Microsoft Artifact Registry (also known as Microsoft Container Registry or MCR) 
 
 ## Official FQDNs for MAR
 
-To access MAR, the following FQDNs should be used.
+To access Registry Endpoint and MAR portal, the following FQDNs should be used.
 
 | Purpose | Protocol | Target FQDN |
 | - | - | - |
-| Registry Endpoint | https | `mcr.microsoft.com` |
+| Registry Endpoint and MAR portal | https | `mcr.microsoft.com` |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` |
 
 > **Note:** MAR provides global coverage through Azure Traffic Manager for the registry endpoint, with regional CDNs managed by Azure Front Door for the data endpoints.
