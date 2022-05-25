@@ -1,41 +1,62 @@
-# Microsoft Container Registry (MCR)
+# Microsoft Artifact Registry (MAR)
 
-Microsoft Container Registry (MCR) is the primary Registry for all Microsoft Published docker images that offers a reliable and trustworthy delivery of container images with a syndicated catalog, while maintaining the quality that customers expect from a  Microsoft product offering. 
+Microsoft Artifact Registry (also known as Microsoft Container Registry or MCR) is the primary Registry for all Microsoft Published artifacts (such as container images) that offers a reliable and trustworthy delivery of artifacts with a syndicated catalog, while maintaining the quality that customers expect from a  Microsoft product offering. 
 
-For more background on MCR:
+For more background on MAR:
 
 - [Microsoft syndicates container catalog (mcr.microsoft.com)](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)
 - [Improved discovery experience for Microsoft containers on Docker Hub
 ](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)
 
-## Browsing MCR Content
+## Browsing MAR Content
 
-The discovery experience for MCR is provided through [dockerhub](https://hub.docker.com/publishers/microsoftowner).
+The discovery experience for MAR is provided through the MAR discovery UI on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
 
-To query the list of repositories within mcr: https://mcr.microsoft.com/v2/_catalog
+1. To browse the list of repositories within MAR, visit https://mcr.microsoft.com/
 
-To query the list of tags, within a repository: `https://mcr.microsoft.com/v2/`*{namespace/repo*}`/tags/list`  
-For example, to retrieve the list of tags for `mcr/hello-world` : https://mcr.microsoft.com/v2/mcr/hello-world/tags/list
+2. To browse the list of tags, within a repository:
 
-## Additional Guidance for the Use of MCR
+    a. Visit https://mcr.microsoft.com/
+    
+    b. Select an artifact from the catalog listing
 
-- [Guidance for using the official MCR endpoints](./docs/mcr-endpoints-guidance.md)
+    c. Select the `Tags` tab to view the list of tags for that particular artifact
+
+## Additional Guidance for the Use of MAR
+
+- [Guidance for using the official MAR endpoints](./docs/mcr-endpoints-guidance.md)
 - [Client Firewall Rules](./client-firewall-rules.md)
 - [Consuming Public Content](https://opencontainers.org/posts/blog/2020-10-30-consuming-public-content/)
 
 ## Providing Feedback
 
-Please [open issues](https://github.com/microsoft/containerregistry/issues) to provide your feedback on usage, as well as any suggestions or concerns with MCR.
+Please [open issues](https://github.com/microsoft/containerregistry/issues) to provide your feedback on usage, as well as any suggestions or concerns with MAR.
 
 ## FAQ
 
-* How does MCR work with Dockerhub?  MCR is a public registry that houses Microsoft Published images but it does not have its own catalog UI experience. Docker Hub is the official source for our customers to discover official Microsoft-published container images. For further details of this integration please visit our [blog](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)
+* **What is the difference between MAR and MCR?**
 
-* What is the difference between MCR and ACR(Azure Container Registry)?  MCR is a public registry for housing only Microsoft's official Container images. ACR is a private container registry for housing our customers' container images.
+    There is no difference, MAR and MCR are the same product offering.
 
-* Can I browse MCR? No, MCR does not have a UI/discovery experience, the only experience with the registry is for interacting with a container image. Ex: docker pull mcr.microsoft.com/windows/servercore:ltsc2019
+* **Will the endpoints change from mcr.microsoft.com to mar.microsoft.com?**
 
-* Can I Onboard new Images to MCR? No, Given that MCR is meant to host only official Microsoft Container Images, only Internal Microsoft Product teams will be able to onboard images to the registry. Once onboarded, the images are available to all public users.
+    No, all endpoints will use the existing `mcr.microsoft.com` structure.
+
+* **How does MAR work with Docker Hub?**  
+
+    MAR is a public registry for housing Microsoft's official artifacts (such as container images). Docker Hub is one of the official sources (in addition to https://mcr.microsoft.com) for our customers to discover official Microsoft-published container images. For further details of this integration please visit our [blog](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/).
+
+* **What is the difference between MAR and ACR (Azure Container Registry)?**  
+
+    MAR is a public registry for housing only Microsoft's official artifacts (such as container images). ACR is a private container registry for housing our customers' container images.
+
+* **Can I browse MAR?**
+
+    Yes, customers can browse the MAR discovery UI at [mcr.microsoft.com](https://mcr.microsoft.com/). Customers can view rich content like descriptions and tag listings for each artifact.
+
+* **Can I Onboard new Images to MAR?** 
+
+    No, Given that MAR is meant to host only official Microsoft Container Images, only Internal Microsoft Product teams will be able to onboard images to the registry. Once onboarded, the images are available to all public users.
 
 ## Legal Notices
 
