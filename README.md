@@ -25,9 +25,9 @@ The discovery experience for MAR is provided through the MAR discovery UI on [mc
 ## Additional Guidance for the Use of MAR
 
 - [Guidance for using the official MAR endpoints](./docs/mcr-endpoints-guidance.md)
-- [Client Firewall Rules](./client-firewall-rules.md)
+- [Client Firewall Rules](./docs/client-firewall-rules.md)
 - [Consuming Public Content](https://opencontainers.org/posts/blog/2020-10-30-consuming-public-content/)
-- [Egress Limits](./egress-limits.md)
+- [Egress Limits](./docs/egress-limits.md)
 
 ## Providing Feedback
 

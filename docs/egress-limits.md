@@ -1,0 +1,3 @@
+# Microsoft Artifact Registry (MAR) Egress Limits
+
+MAR is implementing egress limits to ensure the health of our platform. In case of egress spikes, clients will receive a HTTP 429 with the expectation that the clients will respect a backoff. This enforcement will be based in the locations where high egress occurred. For any additional questions, please submit a [GitHub issue](https://github.com/microsoft/containerregistry/issues).
