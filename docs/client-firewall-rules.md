@@ -19,7 +19,7 @@ To access Registry Endpoint and MAR discovery UI, the following FQDNs are requir
 
 Within Azure, the following configuration may be applied:
 
-![Azure Application Rule](./media/mcr-client-firewall-rules.png)
+![Azure Application Rule](/media/mcr-client-firewall-rules.png)
 
 ## Support
 
