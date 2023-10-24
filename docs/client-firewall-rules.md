@@ -21,6 +21,8 @@ Within Azure, the following configuration may be applied:
 
 ![Azure Application Rule](/media/mcr-client-firewall-rules.png)
 
+## Service Tag Usage
+Microsoft Artifact Registry uses [Azure Front Door](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview) as its entry point. If using service tags for firewall configuration, **both MicrosoftContainerRegistry and AzureFrontDoor.FirstParty [service tags](https://learn.microsoft.com/en-us/azure/virtual-network/service-tags-overview#available-service-tags) should be enabled.**
 ## Support
 
 To contact Microsoft Support: [azure.microsoft.com/support/create-ticket/](https://azure.microsoft.com/support/create-ticket/).
