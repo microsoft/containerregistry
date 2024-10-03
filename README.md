@@ -1,6 +1,6 @@
 # Microsoft Artifact Registry (MAR)
 
-Microsoft Artifact Registry (also known as Microsoft Container Registry or MCR) is the primary Registry for all Microsoft Published artifacts (such as container images) that offers a reliable and trustworthy delivery of artifacts with a syndicated catalog, while maintaining the quality that customers expect from a  Microsoft product offering. 
+Microsoft Artifact Registry (also known as Microsoft Container Registry or MCR) is the primary registry for all Microsoft published artifacts (such as container images) that offers a reliable and trustworthy delivery of artifacts with a syndicated catalog, while maintaining the quality that customers expect from a Microsoft product offering. 
 
 For more background on MAR:
 
@@ -10,7 +10,7 @@ For more background on MAR:
 
 ## Browsing MAR Content
 
-The discovery experience for MAR is provided through the MAR discovery UI on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/publishers/microsoftowner).
+The discovery experience for MAR is provided through the MAR discovery UI on [mcr.microsoft.com](https://mcr.microsoft.com/) and [Docker Hub](https://hub.docker.com/u/microsoft).
 
 1. To browse the list of repositories within MAR, visit https://mcr.microsoft.com/
 
@@ -55,9 +55,13 @@ Please [open issues](https://github.com/microsoft/containerregistry/issues) to p
 
     Yes, customers can browse the MAR discovery UI at [mcr.microsoft.com](https://mcr.microsoft.com/). Customers can view rich content like descriptions and tag listings for each artifact.
 
-* **Can I Onboard new Images to MAR?** 
+* **Can I onboard new images to MAR?** 
 
-    No, Given that MAR is meant to host only official Microsoft Container Images, only Internal Microsoft Product teams will be able to onboard images to the registry. Once onboarded, the images are available to all public users.
+    No, Given that MAR is meant to host only official Microsoft container images, only internal Microsoft product teams will be able to onboard images to the registry. Once onboarded, the images are available to all public users.
+
+* **Does MAR have an service level agreement (SLA)?**
+
+    MAR is globally distributed offering and does not have an SLA. You can view SLAs for products that MAR depends on such as Azure Container Registry and Azure Front Door at [Microsoft SLA for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
 
 ## Legal Notices
 
