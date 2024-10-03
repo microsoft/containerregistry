@@ -61,7 +61,7 @@ Please [open issues](https://github.com/microsoft/containerregistry/issues) to p
 
 * **Does MAR have an service level agreement (SLA)?**
 
-    MAR is globally distributed offering and does not have an SLA. You can view SLAs such as Azure Container Registry on [Microsoft SLA for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
+    MAR is globally distributed offering and does not have an SLA. You can view SLAs for products that MAR depends on such as Azure Container Registry at [Microsoft SLA for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
 
 ## Legal Notices
 
