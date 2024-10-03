@@ -59,7 +59,7 @@ Please [open issues](https://github.com/microsoft/containerregistry/issues) to p
 
     No, Given that MAR is meant to host only official Microsoft container images, only internal Microsoft product teams will be able to onboard images to the registry. Once onboarded, the images are available to all public users.
 
-** Does MAR have an service level agreement (SLA)?
+* **Does MAR have an service level agreement (SLA)?**
 
     MAR is globally distributed offering and does not have an SLA. You can view SLAs such as Azure Container Registry on [Microsoft SLA for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
 
