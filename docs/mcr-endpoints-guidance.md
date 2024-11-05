@@ -63,4 +63,4 @@ If you experience issues with pulling artifact from MAR, [contact Microsoft Supp
 [azure-cdn-china]:      https://docs.azure.cn/cdn/cdn-pops
 [oci-spec]:             https://github.com/opencontainers/distribution-spec
 [oci-artifacts]:        https://github.com/opencontainers/artifacts
-[mcr-firewall-rules]:   ../client-firewall-rules.md
+[mcr-firewall-rules]:   client-firewall-rules.md
