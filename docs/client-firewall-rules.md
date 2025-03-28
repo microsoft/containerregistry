@@ -13,6 +13,11 @@ To access Registry Endpoint and MAR discovery UI, the following FQDNs are requir
 | - | - | - |
 | Registry Endpoint and MAR discovery UI | https | `mcr.microsoft.com` |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` |
+| Registry Endpoint for China Region | https | `mcr.azure.cn`
+| Data Endpoint for China Region | https | `*.data.mcr.azure.cn` |
+
+> **Note:** The China region endpoints (`mcr.azure.cn`) and (`*.data.mcr.azure.cn`) are counterparts to (`mcr.microsoft.com`) and (`*.data.mcr.microsoft.com`).
+
 
 > **Note:** MAR provides global coverage through Azure Traffic Manager for the registry REST endpoint, with regional CDNs for the data endpoints.
 > Over time, MAR regional endpoints _will change_ assuring the best performance for our customers. It is strongly recommended to avoid using region specific rules. The `*.data.mcr.microsoft.com` firewall rules will avoid disruption as we alter regions for performance & readability.
