@@ -13,7 +13,7 @@ To access Registry Endpoint and MAR discovery UI, the following FQDNs are requir
 | - | - | - |
 | Registry Endpoint and MAR discovery UI | https | `mcr.microsoft.com` |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` |
-| Registry Endpoint for China Region | https | `mcr.azure.cn`
+| Registry Endpoint for China Region | https | `mcr.azure.cn` |
 | Data Endpoint for China Region | https | `*.data.mcr.azure.cn` |
 
 > **Note:** The China region endpoints (`mcr.azure.cn`) and (`*.data.mcr.azure.cn`) are counterparts to (`mcr.microsoft.com`) and (`*.data.mcr.microsoft.com`).
