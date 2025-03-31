@@ -27,9 +27,11 @@ To access Registry Endpoint and MAR discovery UI, the following FQDNs should be 
 | Registry Endpoint for China Region | https | `mcr.azure.cn` |
 | Data Endpoint for China Region | https | `*.data.mcr.azure.cn` |
 
-> **Note:** The China region endpoints (`mcr.azure.cn`) and (`*.data.mcr.azure.cn`) are counterparts to (`mcr.microsoft.com`) and (`*.data.mcr.microsoft.com`).
+> [!NOTE]
+> The China region endpoints (`mcr.azure.cn` and `*.data.mcr.azure.cn`) are counterparts to (`mcr.microsoft.com` and `*.data.mcr.microsoft.com`).
 
-> **Note:** MAR provides global coverage through Azure Traffic Manager for the registry endpoint, with regional CDNs managed by Azure Front Door for the data endpoints.
+> [!NOTE]
+> MAR provides global coverage through Azure Traffic Manager for the registry endpoint, with regional CDNs managed by Azure Front Door for the data endpoints.
 > Over time, MAR team will continue adding regional endpoints to ensure the best performance for our customers. Check the [MAR Firewall Rules][mcr-firewall-rules] article for details how to configure your firewall rules.
 
 ## MAR Registry Endpoint Locations
@@ -47,7 +49,6 @@ MAR registry REST endpoints are available in the following nine locations:
 - US West
 - US West 2
 - US West-Central
-
 
 ## MAR Data Endpoint Locations
 
