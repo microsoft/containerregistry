@@ -2,7 +2,7 @@
 title: Guidance for using the official Microsoft Artifact Registry (MAR) endpoints
 description: This articles provides information about the official endpoints of Microsoft Artifact Registry (MAR) and provides guidance how to use the REST and CDN endpoints to pull official Microsoft artifacts around the world.
 ms.topic: guidance
-ms.date: 05/25/2022
+ms.date: 04/01/2025
 ms.author: ttruong
 author: terencet-dev
 ms.custom:
@@ -40,10 +40,10 @@ MAR registry REST endpoints are available in the following nine locations:
 
 - Asia East
 - Asia South East
+- China East 3
+- China North 3
 - Europe North
 - Europe West
-- North China
-- East China
 - US Central
 - US East
 - US West
