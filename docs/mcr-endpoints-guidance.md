@@ -2,7 +2,7 @@
 title: Guidance for using the official Microsoft Artifact Registry (MAR) endpoints
 description: This articles provides information about the official endpoints of Microsoft Artifact Registry (MAR) and provides guidance how to use the REST and CDN endpoints to pull official Microsoft artifacts around the world.
 ms.topic: guidance
-ms.date: 05/25/2022
+ms.date: 04/01/2025
 ms.author: ttruong
 author: terencet-dev
 ms.custom:
@@ -24,8 +24,14 @@ To access Registry Endpoint and MAR discovery UI, the following FQDNs should be 
 | - | - | - |
 | Registry Endpoint and MAR discovery UI | https | `mcr.microsoft.com` |
 | Data Endpoint | https | `*.data.mcr.microsoft.com` |
+| Registry Endpoint for China Region | https | `mcr.azure.cn` |
+| Data Endpoint for China Region | https | `*.data.mcr.azure.cn` |
 
-> **Note:** MAR provides global coverage through Azure Traffic Manager for the registry endpoint, with regional CDNs managed by Azure Front Door for the data endpoints.
+> [!NOTE]
+> The China region endpoints (`mcr.azure.cn` and `*.data.mcr.azure.cn`) are counterparts to (`mcr.microsoft.com` and `*.data.mcr.microsoft.com`).
+
+> [!NOTE]
+> MAR provides global coverage through Azure Traffic Manager for the registry endpoint, with regional CDNs managed by Azure Front Door for the data endpoints.
 > Over time, MAR team will continue adding regional endpoints to ensure the best performance for our customers. Check the [MAR Firewall Rules][mcr-firewall-rules] article for details how to configure your firewall rules.
 
 ## MAR Registry Endpoint Locations
@@ -34,6 +40,8 @@ MAR registry REST endpoints are available in the following nine locations:
 
 - Asia East
 - Asia South East
+- China East 3
+- China North 3
 - Europe North
 - Europe West
 - US Central
@@ -63,4 +71,4 @@ If you experience issues with pulling artifact from MAR, [contact Microsoft Supp
 [azure-cdn-china]:      https://docs.azure.cn/cdn/cdn-pops
 [oci-spec]:             https://github.com/opencontainers/distribution-spec
 [oci-artifacts]:        https://github.com/opencontainers/artifacts
-[mcr-firewall-rules]:   ../client-firewall-rules.md
+[mcr-firewall-rules]:   client-firewall-rules.md
